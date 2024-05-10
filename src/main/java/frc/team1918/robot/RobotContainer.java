@@ -25,12 +25,15 @@ public class RobotContainer {
   public RobotContainer() {
     final InputAxis m_fieldX = new InputAxis("Forward", dj::getLeftY)
       .withDeadband(OIConstants.kMinDeadband)
+      .withInvert(true)
       .withSquaring(true);
     final InputAxis m_fieldY = new InputAxis("Strafe", dj::getLeftX)
       .withDeadband(OIConstants.kMinDeadband)
+      .withInvert(true)
       .withSquaring(true);
     final InputAxis m_rotate = new InputAxis("Rotate", dj::getRightX)
-      .withDeadband(OIConstants.kMinDeadband);
+      .withDeadband(OIConstants.kMinDeadband)
+      .withInvert(true);
     final InputAxis m_angleX = new InputAxis("Angle X", dj::getRightX);
     final InputAxis m_angleY = new InputAxis("Angle Y", dj::getRightY);
 
